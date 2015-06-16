@@ -68,7 +68,29 @@ namespace Thinktecture.IdentityServer.Host.Config
                             new ScopeClaim(Constants.ClaimTypes.Name),
                             new ScopeClaim(Constants.ClaimTypes.Role)
                         }
-                    }
+                    },
+                    new Scope
+                        {
+                            Enabled = true,
+                            Name = "roles",
+                            Type = ScopeType.Identity,
+                            Claims = new List<ScopeClaim>
+                            {
+                                new ScopeClaim("role")
+                            }
+                        },
+                        new Scope
+                        {
+                            Enabled = true,
+                            Name = "ApiAccess",
+                            Description = "Access to API",
+                            Type = ScopeType.Resource,
+
+                            Claims = new List<ScopeClaim>
+                            {
+                                new ScopeClaim("role")
+                            }
+                        }
                 };
         }
     }
