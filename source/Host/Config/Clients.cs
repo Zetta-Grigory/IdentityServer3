@@ -57,6 +57,23 @@ namespace Thinktecture.IdentityServer.Host.Config
                 new Client 
                 {
                     Enabled = true,
+                    ClientName = "Zettabox WEB site",
+                    ClientId = "zettaboxweb",
+                    Flow = Flows.Implicit,
+
+                    RedirectUris = new List<string>
+                    {
+                        "https://localhost:9443/",
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "https://localhost:9443/"
+                    }
+                },
+
+                new Client 
+                {
+                    Enabled = true,
                     ClientName = "MVC Client",
                     ClientId = "mvc",
                     Flow = Flows.Implicit,
