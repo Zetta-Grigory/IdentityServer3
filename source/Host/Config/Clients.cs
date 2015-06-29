@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using Thinktecture.IdentityServer.Core;
 using Thinktecture.IdentityServer.Core.Models;
+using System.Configuration;
 
 namespace Thinktecture.IdentityServer.Host.Config
 {
@@ -63,11 +64,12 @@ namespace Thinktecture.IdentityServer.Host.Config
 
                     RedirectUris = new List<string>
                     {
-                        "https://localhost:9443/",
+                        ConfigurationManager.AppSettings["WebNGClientBaseURLInternal"],
+                        ConfigurationManager.AppSettings["WebNGClientBaseURL"]
                     },
                     PostLogoutRedirectUris = new List<string>
                     {
-                        "https://localhost:9443/"
+                        ConfigurationManager.AppSettings["WebNGClientBaseURL"]
                     }
                 },
 
