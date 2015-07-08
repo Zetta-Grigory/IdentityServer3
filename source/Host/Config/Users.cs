@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using Thinktecture.IdentityServer.Core;
@@ -26,7 +28,7 @@ namespace Thinktecture.IdentityServer.Host.Config
         {
             var users = new List<InMemoryUser>
             {
-                new InMemoryUser{Subject = "818727", Username = "alice", Password = "alice", 
+                new InMemoryUser{Subject = "F841C53D-4D21-4570-9AAC-7B6DE03AE7E4", Username = "alice", Password = "alice", 
                     Claims = new Claim[]
                     {
                         new Claim(Constants.ClaimTypes.Name, "Alice Smith"),
@@ -40,7 +42,7 @@ namespace Thinktecture.IdentityServer.Host.Config
                         new Claim(Constants.ClaimTypes.Address, "{ \"street_address\": \"One Hacker Way\", \"locality\": \"Heidelberg\", \"postal_code\": 69118, \"country\": \"Germany\" }")
                     }
                 },
-                new InMemoryUser{Subject = "88421113", Username = "bob", Password = "bob", 
+                new InMemoryUser{Subject = "EBF3C2E8-8681-4F4B-8A9D-03FBC821AF41", Username = "bob", Password = "bob", 
                     Claims = new Claim[]
                     {
                         new Claim(Constants.ClaimTypes.Name, "Bob Smith"),
